@@ -1,0 +1,168 @@
+.manual {
+    padding-top: 75px;
+    padding-bottom: 110px;
+}
+
+.manual__card-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    justify-items: start;
+    padding-bottom: 118px;
+}
+
+.manual__title-card-description {
+    margin-right: -33px;
+    margin-bottom: 17px;
+    justify-self: center;
+}
+
+.manual__subtitle-card-description {
+    justify-self: start;
+    margin-bottom: 61px;
+}
+
+.manual__description-card {
+    margin: 0;
+    max-width: 310px;
+    margin-bottom: 112px;
+}
+
+.manual__img-card-description {
+    margin-bottom: 30px;
+}
+
+.manual__description-characteristic {
+    margin: 0;
+    max-width: 319px;
+    margin-bottom: 81px;
+}
+
+.manual__download-module {
+    font-family: $font-roboto;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 500;
+    color: $color-blue;
+    text-decoration: none;
+    justify-self: center;
+    padding: 5px 3px;
+    border-bottom: 1px solid $color-blue;
+}
+
+.manual__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    justify-items: center;
+}
+
+.manual__title {
+    margin-right: -33px;
+    margin-bottom: 16px;
+}
+
+.manual__subtitle {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 90px;
+}
+
+.manual__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    column-gap: 65px;
+    row-gap: 53px;
+    list-style: none;
+    font-size: 21px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.manual__item {
+    padding-top: 58px;
+    text-align: center;
+    max-width: 130px;
+
+    &--account {
+        background-image: url("../img/icons/icon-mail.png");
+        background-size: 51px 50px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 58px;
+            height: 1px;
+            display: inline-block;
+            background-color: $color-light-blue;
+            position: absolute;
+            right: -58px;
+            top: 24px;
+        }
+    }
+
+    &--download {
+        background-image: url("../img/icons/icon-download.png");
+        background-size: 51px 50px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 162px;
+            height: 1px;
+            background-color: $color-light-blue;
+            position: absolute;
+            transform: rotate(135deg);
+            left: -120px;
+            bottom: 16px;
+        }
+    }
+
+    &--rate {
+        background-image: url("../img/icons/icon-joystick.png");
+        background-size: 56px 56px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 67px;
+    }
+
+    &--game {
+        background-image: url("../img/icons/icon-arcade.png");
+        background-size: 57px 57px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 66px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 65px;
+            height: 1px;
+            display: inline-block;
+            background-color: #57D6FF;
+            position: absolute;
+            left: -59px;
+            top: 27px;
+        }
+    }
+}
+
+
+.manual__link {
+    font-family: $font-roboto;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 500;
+    color: $color-blue;
+    text-decoration: none;
+    justify-self: center;
+    padding: 5px 7px;
+    border-bottom: 1px solid $color-blue;
+}

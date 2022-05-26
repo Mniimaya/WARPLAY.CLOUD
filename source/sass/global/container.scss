@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    max-width: $sm-max;
+    margin: 0 auto;
+    padding-left: $padding--sm;
+    padding-right: $padding--sm;
+  
+    @include viewport--md {
+      width: 100%;
+      max-width: $md-max;
+      margin: 0 auto;
+      padding-left: $padding--md;
+      padding-right: $padding--md;
+    }
+  
+    @include viewport--lg {
+      width: 100%;
+      max-width: $lg-max;
+      margin: 0 auto;
+      padding-left: $padding--lg;
+      padding-right: $padding--lg;
+    }
+  }

@@ -1,0 +1,99 @@
+.intro__card {
+    background-image: url("../img/intro-background-mobile.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 41px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 0px 15px 15px;
+
+    @include viewport--md {
+        background-image: url("../img/intro-background-desktop.png");
+        background-size: 1444px 850px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 413px;
+        padding-bottom: 224px;
+        max-width: 1327px;
+        margin: 0 auto;
+    }
+}
+
+.intro__logo-link {
+    margin-bottom: 202px;
+
+    @include viewport--md {
+        display: none;
+    }
+}
+
+.intro__text {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: $color-white;
+    max-width: 142px;
+    margin: 0;
+    margin-bottom: 11px;
+    align-self: start;
+
+    @include viewport--md {
+        align-self: center;
+        max-width: 220px;
+        margin-bottom: 1px;
+    }
+}
+
+.intro__slogan {
+    font-size: 48px;
+    line-height: 48px;
+    font-family: $font-aire;
+    font-weight: 400;
+    color: $color-white;
+    margin: 0;
+    margin-bottom: 137px;
+
+    @include viewport--md {
+        margin-bottom: 96px;
+    }
+}
+
+.intro__upgrade {
+    background-color: $color-white;
+    color: $color-black;
+    font-family: $font-aire;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    border: none;
+    width: 230px;
+    height: 61px;
+    text-transform: uppercase;
+    padding: 0;
+    position: relative;
+    padding-left: 21px;
+    margin-right: 20px;
+
+    &::after {
+        content: "";
+        background-color: transparent;
+        width: 21px;
+        height: 61px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        border-left: 21px solid #FFFFFF;
+        border-top: 24px solid transparent;
+
+    }
+
+    @include viewport--md {
+        margin-right: 22px;
+    }
+}

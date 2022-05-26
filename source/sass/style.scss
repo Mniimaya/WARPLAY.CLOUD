@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/base-styles";
+@import "global/visually-hidden";
+@import "global/container";
+
+//миксы
+@import "blocks/title-partition";
+@import "blocks/navigation";
+@import "blocks/social";
+@import "blocks/subtitle-partition";
+@import "blocks/rate-card.scss";
+
+//блоки
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/manual";
+@import "blocks/rate";

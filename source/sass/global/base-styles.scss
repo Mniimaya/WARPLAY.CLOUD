@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: $font-roboto;
+    color: $color-gray;
+    font-weight: 300;
+    font-size: 21.33px;
+    line-height: 32px;
+    background-color: $color-background;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
