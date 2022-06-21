@@ -1,1 +1,1 @@
-[# WARPLAY.CLOUD](https://mniimaya.github.io/warplay.cloud/)
+permalink: /index.html
