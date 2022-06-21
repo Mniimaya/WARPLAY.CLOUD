@@ -1,79 +1,83 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
-    @include viewport--md {
-        background-color: $color-background;
-        position: fixed;
-        width: 100%;
-        z-index: 555;
-        padding: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+
+  @include viewport--md {
+    background-color: $color-background;
+    position: fixed;
+    width: 100%;
+    z-index: 555;
+    padding: 0;
+    align-items: start;
+    box-shadow: 0 2px 24px $color-blue;
+  }
 }
 
 .header__container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 41px;
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-bottom: 30px;
+
+  @include viewport--md {
+    flex-direction: row;
+    max-width: 1440px;
     align-items: center;
-    padding-top: 41px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-bottom: 30px;
-    @include viewport--md {
-        flex-direction: row;
-        padding-top: 37px;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-bottom: 38px;
-        max-width: 1250px;
-        margin: 0 auto;
-    
-    }
+    padding-top: 32px;
+    padding-bottom: 35px;
+    margin: 0 auto;
+  }
 }
 
 .header__navigation {
-    width: 100%;
-    margin-bottom: 106px;
+  width: 100%;
+  margin-bottom: 106px;
 
-    @include viewport--md {
-        margin: 0;
-    }
+  @include viewport--md {
+    margin: 0;
+    width: auto;
+  }
 }
 
 .header__logo-link {
-    margin-bottom: 90px;
+  margin-bottom: 90px;
 
-    @include viewport--md {
-        margin: 0;
-        margin-right: 106px;
-    }
+  @include viewport--md {
+    margin: 0;
+    margin-right: 99px;
+  }
 }
 
 .header__logo-mobile {
-    @include viewport--md {
-        display: none;
-    }
+  @include viewport--md {
+    display: none;
+  }
 }
 
 .header__logo-desktop {
-    display: none;
-    @include viewport--md {
-        display: block;
-    }
+  display: none;
+
+  @include viewport--md {
+    display: block;
+  }
 }
 
 .header__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .haeder__back-menu {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 
-    @include viewport--md {
-        display: none;
-    }
+  @include viewport--md {
+    display: none;
+  }
 }

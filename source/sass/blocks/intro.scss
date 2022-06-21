@@ -1,99 +1,136 @@
 .intro__card {
-    background-image: url("../img/intro-background-mobile.png");
-    background-size: cover;
+  background-image: url("../img/intro-background-desktop.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+  &::before {
+    content: "";
+    width: 132px;
+    height: 1px;
+    background-color: $color-white;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+
+  @include viewport--md {
+    background-image: url("../img/intro-background-desktop.png");
+    background-size: 1444px 850px;
     background-position: top center;
     background-repeat: no-repeat;
-    padding-top: 41px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-bottom: 94px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0px 0px 15px 15px;
-
-    @include viewport--md {
-        background-image: url("../img/intro-background-desktop.png");
-        background-size: 1444px 850px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        padding-top: 413px;
-        padding-bottom: 224px;
-        max-width: 1327px;
-        margin: 0 auto;
-    }
+    padding-top: 413px;
+    padding-bottom: 224px;
+    max-width: 1327px;
+    margin: 0 auto;
+  }
 }
 
 .intro__logo-link {
-    margin-bottom: 202px;
+  margin-bottom: 202px;
 
-    @include viewport--md {
-        display: none;
-    }
+  @include viewport--md {
+    display: none;
+  }
 }
 
 .intro__text {
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 500;
-    color: $color-white;
-    max-width: 142px;
-    margin: 0;
-    margin-bottom: 11px;
-    align-self: start;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: $color-white;
+  max-width: 142px;
+  margin: 0;
+  margin-bottom: 11px;
+  align-self: start;
 
-    @include viewport--md {
-        align-self: center;
-        max-width: 220px;
-        margin-bottom: 1px;
-    }
+  @include viewport--md {
+    align-self: center;
+    max-width: 220px;
+    margin-bottom: 1px;
+  }
 }
 
 .intro__slogan {
-    font-size: 48px;
-    line-height: 48px;
-    font-family: $font-aire;
-    font-weight: 400;
-    color: $color-white;
-    margin: 0;
-    margin-bottom: 137px;
+  font-size: 48px;
+  line-height: 48px;
+  font-family: $font-aire;
+  font-weight: 400;
+  color: $color-white;
+  margin: 0;
+  margin-bottom: 137px;
 
-    @include viewport--md {
-        margin-bottom: 96px;
-    }
+  @include viewport--md {
+    margin-bottom: 96px;
+  }
 }
 
 .intro__upgrade {
-    background-color: $color-white;
-    color: $color-black;
-    font-family: $font-aire;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 400;
-    border: none;
-    width: 230px;
+  background-color: $color-white;
+  color: $color-black;
+  font-family: $font-aire;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  border: none;
+  width: 230px;
+  height: 61px;
+  text-transform: uppercase;
+  padding: 0;
+  position: relative;
+  padding-left: 21px;
+  margin-right: 20px;
+
+  &::after {
+    content: "";
+    background-color: transparent;
+    width: 21px;
     height: 61px;
-    text-transform: uppercase;
-    padding: 0;
-    position: relative;
-    padding-left: 21px;
-    margin-right: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-left: 21px solid #ffffff;
+    border-top: 24px solid transparent;
+  }
 
-    &::after {
-        content: "";
-        background-color: transparent;
-        width: 21px;
-        height: 61px;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        border-left: 21px solid #FFFFFF;
-        border-top: 24px solid transparent;
+  @include viewport--md {
+    margin-right: 22px;
+  }
+}
 
-    }
+.intro__menu-toggle {
+  width: 52px;
+  height: 20px;
+  display: flex;
+  align-items: start;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  padding: 0;
+  bottom: 34px;
+  right: 15px;
 
-    @include viewport--md {
-        margin-right: 22px;
-    }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.intro__menu-toggle span {
+  width: 100%;
+  height: 5px;
+  background-color: #eae5e5;
+  display: block;
+  box-shadow: 0 15px 0 #eae5e5;
 }

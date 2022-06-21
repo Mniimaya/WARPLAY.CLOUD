@@ -1,168 +1,287 @@
 .manual {
-    padding-top: 75px;
-    padding-bottom: 110px;
+  padding-top: 75px;
+  padding-bottom: 110px;
+
+  @include viewport--lg {
+    padding-bottom: 153px;
+  }
+}
+
+.manual__container {
+  @include viewport--md {
+    padding: 0;
+  }
 }
 
 .manual__card-description {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  justify-items: center;
+  padding-bottom: 118px;
+
+  @include viewport--md {
+    grid-template-columns: 675px 512px;
     grid-template-rows: repeat(5, min-content);
-    justify-items: start;
-    padding-bottom: 118px;
+    position: relative;
+    padding-bottom: 87px;
+  }
 }
 
 .manual__title-card-description {
-    margin-right: -33px;
-    margin-bottom: 17px;
-    justify-self: center;
+  margin-right: -33px;
+  margin-bottom: 17px;
+  justify-self: center;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    justify-self: start;
+    padding-left: 42px;
+    margin-bottom: 23px;
+  }
 }
 
 .manual__subtitle-card-description {
-    justify-self: start;
-    margin-bottom: 61px;
+  justify-self: start;
+  margin-bottom: 61px;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+  }
 }
 
 .manual__description-card {
-    margin: 0;
-    max-width: 310px;
-    margin-bottom: 112px;
+  margin: 0;
+  max-width: 310px;
+  margin-bottom: 112px;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    max-width: 445px;
+    margin-bottom: 47px;
+    grid-row: 3/4;
+  }
+}
+
+.manual__img-box {
+  margin-bottom: 30px;
+
+  @include viewport--md {
+    grid-column: 1/2;
+    grid-row: 2/7;
+    position: absolute;
+    top: -115px;
+    left: -57px;
+  }
 }
 
 .manual__img-card-description {
-    margin-bottom: 30px;
+  @include viewport--md {
+    width: 664px;
+  }
 }
 
 .manual__description-characteristic {
-    margin: 0;
-    max-width: 319px;
-    margin-bottom: 81px;
+  margin: 0;
+  max-width: 319px;
+  margin-bottom: 81px;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    max-width: 471px;
+    grid-row: 4/5;
+    margin-bottom: 71px;
+  }
 }
 
 .manual__download-module {
-    font-family: $font-roboto;
-    font-size: 16px;
-    line-height: 18.75px;
-    font-weight: 500;
-    color: $color-blue;
-    text-decoration: none;
-    justify-self: center;
-    padding: 5px 3px;
-    border-bottom: 1px solid $color-blue;
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 500;
+  color: $color-blue;
+  text-decoration: none;
+  justify-self: center;
+  padding: 5px 3px;
+  border-bottom: 1px solid $color-blue;
+
+  @include viewport--md {
+    grid-column: 2/-1;
+    grid-template-rows: 5/6;
+    justify-self: start;
+  }
 }
 
 .manual__card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, min-content);
-    justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .manual__title {
-    margin-right: -33px;
-    margin-bottom: 16px;
+  margin-right: -33px;
+  margin-bottom: 16px;
 }
 
 .manual__subtitle {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    margin-bottom: 90px;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  margin-bottom: 90px;
+  align-self: start;
 }
 
 .manual__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: start;
-    column-gap: 65px;
-    row-gap: 53px;
-    list-style: none;
-    font-size: 21px;
-    line-height: 32px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  column-gap: 65px;
+  row-gap: 53px;
+  list-style: none;
+  font-size: 21px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include viewport--md {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 61px;
+    margin-bottom: 84px;
+  }
 }
 
 .manual__item {
-    padding-top: 58px;
-    text-align: center;
-    max-width: 130px;
+  padding-top: 58px;
+  text-align: center;
+  max-width: 130px;
 
-    &--account {
-        background-image: url("../img/icons/icon-mail.png");
-        background-size: 51px 50px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        position: relative;
+  @include viewport--md {
+    max-width: 183px;
+    padding-top: 75px;
+  }
 
-        &::after {
-            content: "";
-            width: 58px;
-            height: 1px;
-            display: inline-block;
-            background-color: $color-light-blue;
-            position: absolute;
-            right: -58px;
-            top: 24px;
-        }
+  &--account {
+    background-image: url("../img/icons/icon-mail-mob.png");
+    background-size: 51px 50px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 58px;
+      height: 1px;
+      display: inline-block;
+      background-color: $color-light-blue;
+      position: absolute;
+      right: -58px;
+      top: 24px;
     }
 
-    &--download {
-        background-image: url("../img/icons/icon-download.png");
-        background-size: 51px 50px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        position: relative;
+    @include viewport--md {
+      background-image: url("../img/icons/icon-mail-desk.png");
+      background-size: 64px 64px;
+      &::after {
+        width: 73px;
+      }
+    }
+  }
 
-        &::before {
-            content: "";
-            width: 162px;
-            height: 1px;
-            background-color: $color-light-blue;
-            position: absolute;
-            transform: rotate(135deg);
-            left: -120px;
-            bottom: 16px;
-        }
+  &--download {
+    background-image: url("../img/icons/icon-download-mob.png");
+    background-size: 51px 50px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 162px;
+      height: 1px;
+      background-color: $color-light-blue;
+      position: absolute;
+      transform: rotate(135deg);
+      left: -120px;
+      bottom: 16px;
     }
 
-    &--rate {
-        background-image: url("../img/icons/icon-joystick.png");
-        background-size: 56px 56px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        padding-top: 67px;
+    @include viewport--md {
+      background-image: url("../img/icons/icon-download-desk.png");
+      background-size: 64px 64px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        width: 73px;
+        height: 1px;
+        display: inline-block;
+        background-color: $color-light-blue;
+        position: absolute;
+        right: -58px;
+        top: 24px;
+      }
+    }
+  }
+
+  &--rate {
+    background-image: url("../img/icons/icon-joystick-mob.png");
+    background-size: 56px 56px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 67px;
+
+    @include viewport--md {
+      background-image: url("../img/icons/icon-joystick-desk.png");
+      background-size: 64px 64px;
+      padding-top: 75px;
+    }
+  }
+
+  &--game {
+    background-image: url("../img/icons/icon-arcade-mob.png");
+    background-size: 57px 57px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 66px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 65px;
+      height: 1px;
+      display: inline-block;
+      background-color: #57d6ff;
+      position: absolute;
+      left: -59px;
+      top: 27px;
     }
 
-    &--game {
-        background-image: url("../img/icons/icon-arcade.png");
-        background-size: 57px 57px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        padding-top: 66px;
-        position: relative;
+    @include viewport--md {
+      background-image: url("../img/icons/icon-arcade-desk.png");
+      background-size: 57px 57px;
+      padding-top: 75px;
 
-        &::before {
-            content: "";
-            width: 65px;
-            height: 1px;
-            display: inline-block;
-            background-color: #57D6FF;
-            position: absolute;
-            left: -59px;
-            top: 27px;
-        }
+      &::before {
+        width: 65px;
+      }
     }
+  }
 }
 
-
 .manual__link {
-    font-family: $font-roboto;
-    font-size: 16px;
-    line-height: 18.75px;
-    font-weight: 500;
-    color: $color-blue;
-    text-decoration: none;
-    justify-self: center;
-    padding: 5px 7px;
-    border-bottom: 1px solid $color-blue;
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 500;
+  color: $color-blue;
+  text-decoration: none;
+  justify-self: center;
+  padding: 5px 7px;
+  border-bottom: 1px solid $color-blue;
 }

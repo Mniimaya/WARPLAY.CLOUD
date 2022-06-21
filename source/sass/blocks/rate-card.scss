@@ -1,76 +1,103 @@
-.rate-card{
-    padding-top: 76px;
-    padding-left: 32px;
-    padding-bottom: 50px;
-    background-color: $color-dark-gray;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+.rate-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 76px;
+  padding-left: 32px;
+  padding-bottom: 50px;
+  padding-right: 7px;
+  background-color: $color-dark-gray;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  &--beneficial {
+    background-color: $color-blue;
+    color: $color-black;
+  }
+
+  @include viewport--md {
+    padding-left: 47px;
+    padding-right: 38px;
+    padding-bottom: 44px;
 
     &--beneficial {
-        background-color: $color-blue;
-        color: $color-black;
+      padding-left: 60px;
     }
+  }
 }
 
 .rate-card:not(:last-child) {
-    margin-bottom: 34px;
+  margin-bottom: 34px;
+
+  @include viewport--md {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
 }
 
 .rate-card__title {
-    margin: 0;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    color: $color-white;
-    margin-bottom: 19px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: $color-white;
+  margin-bottom: 19px;
 
-    &--beneficial {
-        color: $color-black;
-    }
+  &--beneficial {
+    color: $color-black;
+  }
 }
 
 .rate-card__list,
 .rate-card__list-inner {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .rate-card__list {
-    margin-bottom: 66px;
+  margin-bottom: 66px;
+
+  @include viewport--md {
+    flex-grow: 1;
+  }
 }
 
 .rate-card__price {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 28px;
-    display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 28px;
+  display: block;
 }
 
 .rate-card__description {
-    margin: 0;
+  margin: 0;
 }
 
 .rate-card__button-choose {
-    width: 282px;
-    height: 62px;
-    border: none;
-    background-color: $color-blue;
-    font-family: $font-aire;
-    color: $color-background;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 43px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: -8px;
-    margin-top: auto;
+  width: 282px;
+  min-height: 62px;
+  border: none;
+  background-color: $color-blue;
+  font-family: $font-aire;
+  color: $color-background;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: -8px;
+  margin-top: auto;
 
-    &--beneficial {
-        background-color: $color-black;
-        color: $color-white;
-    }
+  &--beneficial {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  @include viewport--md {
+    width: 321px;
+    min-height: 70px;
+  }
 }

@@ -1,24 +1,57 @@
+.rate {
+  padding-bottom: 45px;
+
+  @include viewport--md {
+    padding-bottom: 150px;
+  }
+}
+
 .rate__container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--md {
+    align-items: center;
+  }
 }
 
 .rate__title {
-    align-self: center;
-    padding-left: 28px;
-    margin-bottom: 15px;
+  align-self: center;
+  padding-left: 28px;
+  margin-bottom: 15px;
 }
 
 .rate__subtitle {
-    margin-bottom: 58px;
+  margin-bottom: 58px;
+
+  @include viewport--md {
+    margin-bottom: 80px;
+  }
 }
 
 .rate__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  @include viewport--md {
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 582px;
+      height: 1px;
+      background-color: $color-blue;
+      bottom: -92px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      position: absolute;
+    }
+  }
+}

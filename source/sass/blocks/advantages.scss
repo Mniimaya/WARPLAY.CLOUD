@@ -1,0 +1,121 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/advantages-background-mobile.png");
+  background-position: top 153px left -107px;
+  background-size: 525px 357px;
+  background-repeat: no-repeat;
+  padding-bottom: 25px;
+
+  @include viewport--md {
+    background-image: url("../img/advantages-background-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 1275px 1078px;
+    background-position: top -128px right -409px;
+    padding-top: 186px;
+  }
+}
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 41px;
+
+  @include viewport--md {
+    padding-left: 0;
+  }
+}
+
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include viewport--md {
+    padding-bottom: 344px;
+  }
+}
+
+.advantages__title {
+  align-self: center;
+  margin-bottom: 25px;
+
+  @include viewport--md {
+    align-self: start;
+  }
+}
+
+
+.advantages__subtitle {
+  max-width: 286px;
+  margin-bottom: 392px;
+
+  @include viewport--md {
+    margin-bottom: 92px;
+  }
+}
+
+.advantages__description {
+  max-width: 284px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 69px;
+
+  @include viewport--md {
+    max-width: 449px;
+    margin-bottom: 54px;
+  }
+}
+
+.description__link {
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 500;
+  color: $color-blue;
+  text-decoration: none;
+  justify-self: center;
+  padding: 5px 7px;
+  border-bottom: 1px solid $color-blue;
+  align-self: center;
+  margin-bottom: 77px;
+  margin-right: 28px;
+
+  @include viewport--md {
+    align-self: start;
+  }
+}
+
+.advantages__card-location {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__location-title {
+  align-self: center;
+  margin-bottom: 5px;
+}
+
+.advantages__location-subtitle {
+  align-self: center;
+  margin-right: 28px;
+
+  @include viewport--md {
+    margin-bottom: 43px;
+  }
+}
+
+.advantages__location-map {
+  object-fit: none;
+  object-position: -21px 57px;
+  display: inline-block;
+  width: 381px;
+  height: 330px;
+
+  @include viewport--md {
+    width: 725px;
+    height: 395px;
+    object-position: 0;
+  }
+}

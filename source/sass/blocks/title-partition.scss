@@ -1,18 +1,19 @@
 .title-partition {
-    color: $color-light-blue;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 300;
+  color: $color-light-blue;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: $color-light-blue;
+    display: inline-block;
     position: relative;
-    margin: 0;
-    &::before {
-        content: "";
-        width: 50px;
-        height: 1px;
-        background-color: $color-light-blue;
-        display: inline-block;
-        position: relative;
-        right: 34px;
-        top: -5px;
-    }
+    right: 34px;
+    top: -5px;
+  }
 }
