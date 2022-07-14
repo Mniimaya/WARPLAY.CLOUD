@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  @include viewport--md {
+  @include viewport--lg {
     flex-direction: row;
     flex-wrap: wrap;
     width: auto;

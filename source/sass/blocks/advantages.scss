@@ -3,16 +3,24 @@
   flex-direction: column;
   align-items: center;
   background-image: url("../img/advantages-background-mobile.png");
-  background-position: top 153px left -107px;
+  background-position: top 153px center;
   background-size: 525px 357px;
   background-repeat: no-repeat;
   padding-bottom: 25px;
 
   @include viewport--md {
+    background-image: url("../img/advantages-background-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 597px 544px;
+    background-position: top 0 right -313px;
+    padding-top: 186px;
+  }
+
+  @include viewport--lg {
     background-image: url("../img/advantages-background-desktop.png");
     background-repeat: no-repeat;
-    background-size: 1275px 1078px;
-    background-position: top -128px right -409px;
+    background-size: 900px 802px;
+    background-position: top right -409px;
     padding-top: 186px;
   }
 }
@@ -20,10 +28,9 @@
 .advantages__container {
   display: flex;
   flex-direction: column;
-  padding-left: 41px;
 
   @include viewport--md {
-    padding-left: 0;
+    padding-left: 41px;
   }
 }
 
@@ -33,17 +40,18 @@
   align-items: center;
 
   @include viewport--md {
-    padding-bottom: 344px;
+    padding-bottom: 150px;
+  }
+
+  @include viewport--lg {
+    padding-bottom: 150px;
+    align-items: flex-start;
   }
 }
 
 .advantages__title {
   align-self: center;
   margin-bottom: 25px;
-
-  @include viewport--md {
-    align-self: start;
-  }
 }
 
 
@@ -81,10 +89,6 @@
   align-self: center;
   margin-bottom: 77px;
   margin-right: 28px;
-
-  @include viewport--md {
-    align-self: start;
-  }
 }
 
 .advantages__card-location {

@@ -1,15 +1,21 @@
 .manual {
   padding-top: 75px;
   padding-bottom: 110px;
+  position: relative;
 
   @include viewport--lg {
     padding-bottom: 153px;
-  }
-}
 
-.manual__container {
-  @include viewport--md {
-    padding: 0;
+    &::before {
+      content: "";
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: block;
+      position: absolute;
+      top: 5%;
+      bottom: 0;
+      left: 10%;
+    }
   }
 }
 
@@ -21,7 +27,7 @@
   padding-bottom: 118px;
 
   @include viewport--md {
-    grid-template-columns: 675px 512px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, min-content);
     position: relative;
     padding-bottom: 87px;
@@ -79,6 +85,9 @@
 
 .manual__img-card-description {
   @include viewport--md {
+    width: 499px;
+  }
+  @include viewport--lg {
     width: 664px;
   }
 }
@@ -130,6 +139,10 @@
   grid-row: 2/3;
   margin-bottom: 90px;
   align-self: start;
+
+  @include viewport--md {
+    align-self: center;
+  }
 }
 
 .manual__list {

@@ -46,8 +46,17 @@
   }
 }
 
+.footer__item {
+  padding: 5px;
+}
+
 .footer__item:not(:last-child) {
   margin-bottom: 5px;
+
+  @include viewport--md {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
 }
 
 .footer__link {
