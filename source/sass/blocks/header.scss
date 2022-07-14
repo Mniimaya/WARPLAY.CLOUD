@@ -47,6 +47,14 @@
 .header__logo-link {
   margin-bottom: 90px;
 
+  @include viewport--md {
+    color: $color-blue;
+
+    &:hover {
+      color: $color-gray;
+    }
+  }
+
   @include viewport--lg {
     margin: 0;
     margin-right: 99px;
@@ -71,6 +79,15 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.header__item:not(:last-child) {
+  margin-bottom: 11px;
+
+  @include viewport--lg {
+    margin-right: 26px;
+    margin-bottom: 0;
+  }
 }
 
 .header__back-menu {

@@ -25,6 +25,16 @@
 
 .footer__social-link {
   padding: 3px;
+  color: $color-gray;
+
+  &:hover {
+    color: $color-blue;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $color-light-blue;
+  }
 }
 
 .footer__social-item:not(:last-child) {
@@ -65,4 +75,26 @@
   line-height: 14px;
   color: $color-white;
   text-decoration: none;
+
+  &:hover {
+    color: $color-blue;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $color-light-blue;
+  }
+}
+
+.footer__logo-link {
+  color: $color-gray;
+
+  &:hover {
+    color: $color-blue;
+    transition: 0.2s;
+  }
+
+  &:active {
+    color: $color-light-blue;
+  }
 }

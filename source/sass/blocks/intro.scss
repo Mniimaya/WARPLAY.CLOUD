@@ -108,6 +108,10 @@
   @include viewport--md {
     margin-right: 22px;
   }
+
+  &:hover {
+    color: $color-blue;
+  }
 }
 
 .intro__menu-toggle {
