@@ -28,20 +28,30 @@
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    padding-top: 413px;
+    padding-top: 50px;
     padding-bottom: 224px;
     max-width: 1700px;
     margin: 0 auto;
-    border-radius: 30px;
     outline: 1px solid $color-light-blue;
+  }
+
+  @include viewport--lg {
+    padding-top: 400px;
   }
 }
 
 .intro__logo-link {
-  margin-bottom: 202px;
+  margin-bottom: 500px;
 
-  @include viewport--md {
+  @include viewport--lg {
     display: none;
+  }
+}
+
+.intro__logo {
+  @include viewport--md {
+    width: 400px;
+    height: 70px;
   }
 }
 
@@ -58,7 +68,7 @@
   @include viewport--md {
     align-self: center;
     max-width: 220px;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
   }
 }
 
@@ -73,6 +83,10 @@
 
   @include viewport--md {
     margin-bottom: 96px;
+  }
+
+  @include viewport--lg {
+    margin-bottom: 150px;
   }
 }
 

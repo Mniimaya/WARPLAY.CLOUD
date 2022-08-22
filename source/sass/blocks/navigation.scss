@@ -18,12 +18,17 @@
   padding: 10px 10px;
 
   &:hover {
-    color: $color-gray
+    color: $color-gray;
   }
 
   &:active {
     color: $color-blue;
     transition: 0.3ms;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-blue;
+    border-radius: 0.2em;
   }
 
   @include link-reset;

@@ -21,6 +21,10 @@
   list-style: none;
   display: flex;
   margin-bottom: 7px;
+
+  @include viewport--md {
+    margin-bottom: 0;
+  }
 }
 
 .footer__social-link {
@@ -53,6 +57,9 @@
   @include viewport--md {
     flex-direction: row;
     margin-bottom: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    align-items: flex-start;
   }
 }
 

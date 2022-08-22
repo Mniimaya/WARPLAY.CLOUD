@@ -177,7 +177,7 @@
   }
 
   &--account {
-    background-image: url("../img/icons/icon-mail-mob.png");
+    background-image: url("../img/icons/mail-mob.png");
     background-size: 51px 50px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -195,7 +195,7 @@
     }
 
     @include viewport--md {
-      background-image: url("../img/icons/icon-mail-desk.png");
+      background-image: url("../img/icons/mail-desk.png");
       background-size: 64px 64px;
       &::after {
         width: 73px;
@@ -204,7 +204,7 @@
   }
 
   &--download {
-    background-image: url("../img/icons/icon-download-mob.png");
+    background-image: url("../img/icons/download-mob.png");
     background-size: 51px 50px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@
     }
 
     @include viewport--md {
-      background-image: url("../img/icons/icon-download-desk.png");
+      background-image: url("../img/icons/download-desk.png");
       background-size: 64px 64px;
 
       &::before {
@@ -243,21 +243,21 @@
   }
 
   &--rate {
-    background-image: url("../img/icons/icon-joystick-mob.png");
+    background-image: url("../img/icons/joystick-mob.png");
     background-size: 56px 56px;
     background-position: top center;
     background-repeat: no-repeat;
     padding-top: 67px;
 
     @include viewport--md {
-      background-image: url("../img/icons/icon-joystick-desk.png");
+      background-image: url("../img/icons/joystick-desk.png");
       background-size: 64px 64px;
       padding-top: 75px;
     }
   }
 
   &--game {
-    background-image: url("../img/icons/icon-arcade-mob.png");
+    background-image: url("../img/icons/arcade-mob.png");
     background-size: 57px 57px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -276,7 +276,7 @@
     }
 
     @include viewport--md {
-      background-image: url("../img/icons/icon-arcade-desk.png");
+      background-image: url("../img/icons/arcade-desk.png");
       background-size: 57px 57px;
       padding-top: 75px;
 

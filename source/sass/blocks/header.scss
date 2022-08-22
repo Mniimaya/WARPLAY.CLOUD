@@ -5,6 +5,7 @@
   padding-bottom: 30px;
 
   @include viewport--lg {
+    display: flex;
     background-color: $color-background;
     position: fixed;
     width: 100%;
@@ -47,6 +48,11 @@
 .header__logo-link {
   margin-bottom: 90px;
 
+  &:focus-visible {
+    outline: 2px solid $color-blue;
+    border-radius: 0.2em;
+  }
+
   @include viewport--md {
     color: $color-blue;
 
@@ -62,7 +68,7 @@
 }
 
 .header__logo-mobile {
-  @include viewport--md {
+  @include viewport--lg {
     display: none;
   }
 }
@@ -70,7 +76,7 @@
 .header__logo-desktop {
   display: none;
 
-  @include viewport--md {
+  @include viewport--lg {
     display: block;
   }
 }

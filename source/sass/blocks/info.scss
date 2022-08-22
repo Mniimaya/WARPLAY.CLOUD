@@ -35,3 +35,17 @@
   font-weight: 300;
 }
 
+.info__link {
+  color: $color-white;
+  text-decoration: none;
+}
+
+.info__link:hover .info__icon{
+  margin-right: 10px;
+  transition: 100ms;
+}
+
+.info__icon {
+  margin-right: 5px;
+}
+
