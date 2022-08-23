@@ -1,0 +1,90 @@
+.registration {
+  padding: 50px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--lg {
+    padding-top: 250px;
+  }
+}
+
+.registration__link-back {
+  margin-bottom: 40px;
+}
+
+.registration__link-registration {
+  font-size: 48px;
+  line-height: 48px;
+  font-family: $font-aire;
+  color: $color-white;
+}
+
+.registration__link-log-in {
+  font-size: 48px;
+  line-height: 48px;
+  font-family: $font-aire;
+  color: $color-gray;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration__input-email {
+  margin-bottom: 15px;
+}
+
+.registration__input-password {
+  margin-bottom: 40px;
+}
+
+.registration__button-submit {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: $font-aire;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  border: none;
+  width: 230px;
+  height: 61px;
+  position: relative;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    background-color: transparent;
+    width: 21px;
+    height: 61px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-left: 21px solid #ffffff;
+    border-top: 24px solid transparent;
+  }
+}
+
+.registration__input-rules-custom {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: $color-white;
+  margin-right: 15px;
+}
+
+.registration__label-rules {
+  display: flex;
+  align-items: flex-start;
+}
+
+.registration__text-rules {
+  max-width: 270px;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+}
