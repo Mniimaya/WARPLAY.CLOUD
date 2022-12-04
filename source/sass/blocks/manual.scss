@@ -5,17 +5,6 @@
 
   @include viewport--lg {
     padding-bottom: 153px;
-
-    &::before {
-      content: "";
-      width: 1px;
-      background-color: rgba(255, 255, 255, 0.15);
-      display: block;
-      position: absolute;
-      top: 5%;
-      bottom: 0;
-      left: 10%;
-    }
   }
 }
 
@@ -65,7 +54,7 @@
 
   @include viewport--md {
     grid-column: 2/-1;
-    max-width: 445px;
+    max-width: 471px;
     margin-bottom: 47px;
     grid-row: 3/4;
   }
@@ -77,9 +66,6 @@
   @include viewport--md {
     grid-column: 1/2;
     grid-row: 2/7;
-    position: absolute;
-    top: -115px;
-    left: -57px;
   }
 }
 

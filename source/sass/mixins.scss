@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+@mixin trans {
+  transition: all 0.3s ease;
+}
+
 @mixin link-reset {
   display: block;
   text-decoration: none;

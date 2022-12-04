@@ -112,11 +112,29 @@
   </header>
 
   <main>
-
     <section class="intro">
       <h1 class="visually-hidden">Сервис облачного гейминга для вашего досуга.</h1>
 
       <div class="intro__card">
+        <div class="overlay"></div>
+        <div class="intro__slider">
+          <div class="intro__slider-wrapper">
+            <div class="intro__slide">
+              <img src="img/index-slide1.jpg" alt="Изображение первого слайда.">
+            </div>
+            <div class="intro__slide">
+              <img src="img/index-slide2.jpg" alt="Изображение второго слайда.">
+            </div>
+            <div class="intro__slide">
+              <img src="img/index-slide3.jpg" alt="Изображение третьего слайда.">
+            </div>
+            <div class="intro__slide">
+              <img src="img/index-slide4.jpg" alt="Изображение чертвертого слайда.">
+            </div>
+          </div>
+
+          <div class="intro__slider__scrollbar"></div>
+        </div>
         <a href="" class="intro__logo-link" aria-label="Логотип сайта облачного гейминга.">
           <svg class="intro__logo" width="212" height="41" viewBox="0 0 212 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -143,14 +161,15 @@
         <span class="intro__text">Сервис облачного гейминга</span>
         <h2 class="intro__slogan">Преврати свое устройство в игровое</h2>
         <a href="registration.html" class="intro__upgrade" aria-label="Начать использовать облачный гейминг.">upgrade</a>
-        <button class="intro__menu-toggle" aria-label="Открыть меню."><span></span></button>
+        <button class="intro__menu-toggle" type="button" aria-label="Открыть меню."><span></span></button>
+        <div class="intro__link-line"></div>
       </div>
     </section>
-
-    <section class="manual">
+    <div class="section-wrapper">
+    <section class="manual container">
       <h2 class="visually-hidden">О работе сервиса</h2>
 
-      <div class="manual__container container">
+      <div class="manual__container">
         <div class="manual__card-description">
           <h2 class="manual__title-card-description title-partition">Облачный гейминг</h2>
           <span class="manual__subtitle-card-description subtitle-partition">Как это работает</span>
@@ -185,10 +204,10 @@
       </div>
     </section>
 
-    <section class="rate">
+    <section class="rate container">
       <h2 class="visually-hidden">Тарифные планы облачного гейминга</h2>
 
-      <div class="rate__container container">
+      <div class="rate__container">
         <h2 class="rate__title title-partition">Гибкие тарифы</h2>
         <span class="rate__subtitle subtitle-partition">Доступные подписки</span>
       </div>
@@ -237,11 +256,16 @@
         </ul>
     </section>
 
-    <section class="advantages">
+  </div>
+
+    <section class="advantages container">
       <h2 class="visually-hidden">Наши приемущества</h2>
 
-      <div class="advantages__container container">
+      <div class="advantages__container">
         <div class="advantages__card">
+          <div class="advantages__card__desk-bg">
+            <div class="advantages__card__desk-blur"></div>
+            <img src="img/advantages-background-desktop.png"></div>
           <h2 class="advantages__title title-partition">Играть можно в браузере</h2>
           <span class="advantages__subtitle subtitle-partition">Запускайте на любых устройствах</span>
           <p class="advantages__description">Наш модуль доступен на все популярные ОС и&nbsp;работает на всех
@@ -250,7 +274,7 @@
         </div>
       </div>
       <div class="advantages__card-location">
-        <div class="advantages__container container">
+        <div class="advantages__container">
           <h2 class="advantages__location-title title-partition">Игровые сервера на карте</h2>
           <span class="advantages__location-subtitle subtitle-partition">Карта локаций</span>
         </div>
@@ -266,7 +290,7 @@
 
   <footer class="footer">
 
-    <div class="footer__container container">
+    <div class="footer__container">
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="" class="footer__social-link" aria-label="Перейти на нашу группу вконтакте.">
@@ -325,6 +349,7 @@
   </div>
   </footer>
 
+  <script src="./js/swiper-bundle.js"></script>
   <script src="./js/main.js" type="module"></script>
 </body>
 

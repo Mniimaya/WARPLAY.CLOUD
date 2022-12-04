@@ -19,6 +19,19 @@
     padding-right: 38px;
     padding-bottom: 44px;
   }
+
+  @include viewport--lg {
+    &:hover .rate-card__button-choose {
+      background-color: $color-background;
+      color: $color-blue;
+      transition: 0.5s;
+    }
+
+  }
+}
+
+.rate-card--beneficial:hover .rate-card__button-choose--beneficial {
+  color: $color-white;
 }
 
 .rate-card__title {
@@ -62,8 +75,8 @@
 }
 
 .rate-card__button-choose {
-  width: 282px;
-  min-height: 62px;
+  width: 100%;
+  height: 62px;
   border: none;
   background-color: $color-blue;
   font-family: $font-aire;
@@ -78,11 +91,6 @@
   border-radius: 5px;
   margin-top: auto;
 
-  &:hover {
-    background-color: $color-background;
-    color: $color-blue;
-    transition: 0.5s;
-  }
 
   &:active {
     transform: scale(1.1);
@@ -99,7 +107,12 @@
   }
 
   @include viewport--md {
-    width: 321px;
-    min-height: 70px;
+    height: 70px;
+  }
+}
+
+.rate__item:hover {
+  @include viewport--lg {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 }

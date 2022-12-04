@@ -6,7 +6,8 @@
   @include viewport--lg {
     flex-direction: row;
     flex-wrap: wrap;
-    width: auto;
+    width: max-content;
+    justify-content: space-between;
   }
 }
 
@@ -16,10 +17,7 @@
   font-weight: 400;
   color: $color-white;
   padding: 10px 10px;
-
-  &:hover {
-    color: $color-gray;
-  }
+  overflow: hidden;
 
   &:active {
     color: $color-blue;
@@ -37,32 +35,22 @@
   @include viewport--md {
     padding: 14px 10px;
   }
+
 }
 
-.navigation__link--current {
-  &::after {
-    content: "";
-    width: 300px;
-    height: 1px;
-    background-color: #00c5ff;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.navigation__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: $color-blue;
+  left: 0;
+  bottom: 0;
+  @include trans;
+}
 
-  @include viewport--lg{
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #00c5ff;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+.navigation__link:hover::after,
+.navigation__link:hover {
+  width: 100%;
+  color: $color-gray;
 }
