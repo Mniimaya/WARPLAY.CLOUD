@@ -10,3 +10,15 @@
 .social__item:not(:last-child) {
   margin-right: 15px;
 }
+
+.social__link {
+  color: $color-gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $color-blue;
+  }
+}

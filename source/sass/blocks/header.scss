@@ -38,6 +38,18 @@
   padding-right: 38px;
   padding-bottom: 30px;
   width: 100vw;
+  position: relative;
+
+  &::after {
+    width: 70%;
+    height: 1px;
+    content: "";
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @include viewport--lg {
     flex-direction: row;
@@ -47,6 +59,10 @@
     padding-bottom: 35px;
     margin: 0 auto;
     justify-content: flex-start;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -139,6 +155,11 @@
 .header__back-menu {
   background-color: transparent;
   border: none;
+  color: $color-white;
+
+  &:hover {
+    color: $color-blue;
+  }
 
   @include viewport--lg {
     display: none;

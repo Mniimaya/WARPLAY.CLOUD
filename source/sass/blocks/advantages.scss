@@ -96,11 +96,10 @@
 }
 
 .advantages__location-map {
-  object-fit: none;
-  object-position: -21px 57px;
+  object-fit: cover;
   display: inline-block;
-  width: 381px;
-  height: 330px;
+  width: 100%;
+  height: 100%;
 
   @include viewport--md {
     width: 725px;
