@@ -137,7 +137,7 @@
         <h1 class="visually-hidden">Сервис облачного гейминга.</h1>
         <span class="intro__text">Сервис облачного гейминга</span>
         <h2 class="intro__slogan">Преврати свое устройство в игровое</h2>
-        <a href="registration.html" class="intro__upgrade" aria-label="Начать использовать облачный гейминг.">upgrade</a>
+        <a href="#" class="intro__upgrade" aria-label="Начать использовать облачный гейминг.">upgrade</a>
         <button class="intro__menu-toggle" type="button" aria-label="Открыть меню."><span></span></button>
         <div class="intro__link-line"></div>
       </div>
@@ -153,13 +153,10 @@
           <p class="manual__description-card">Наши сервера запускают игру, и передают вам картинку, которой вы можете
             управлять в реальном времени!</p>
             <div class="manual__img-box">
-              <picture>
-                <source type="image/webp" srcset="img/manual-img-desktop.webp 1x, img/manual-img-desktop@2x.webp 2x" media="(min-width:1150px)">
-                <source type="image/webp" srcset="img/manual-img-tablet.webp 1x, img/manual-img-tablet@2x.webp 2x" media="(min-width:768px)">
-                <source type="image/webp" srcset="img/manual-img-mobile.webp 1x, img/manual-img-mobile@2x.webp 2x">
-                <source srcset="img/manual-img-desktop.png 1x, img/manual-img-desktop@2x.png 2x" media="(min-width:1150px)">
-                <source srcset="img/manual-img-tablet.png 1x, img/manual-img-tablet@2x.png 2x" media="(min-width:768px)">
-                <img class="manual__img-card-description" src="img/manual-img-mobile.png" srcset="img/manual-img-mobile@2x.png 2x" width="337" height="197" alt="Изображение процесса работы облачного гейминга.">
+              <picture>           
+                <source srcset="img/manual-img-desktop@2x.png 1x, img/manual-img-desktop@2x.png 2x" media="(min-width:1150px)">
+                <source srcset="img/manual-img-tablet@2x.png 1x, img/manual-img-tablet@2x.png 2x" media="(min-width:768px)">
+                <img class="manual__img-card-description" src="img/manual-img-mobile@2x.png" srcset="img/manual-img-mobile@2x.png 2x" width="337" height="197" alt="Изображение процесса работы облачного гейминга.">
               </picture>
           </div>
           <p class="manual__description-characteristic">Приложение &thinsp;запустится на ПК с процессором от 1.5 GHz ,
@@ -256,12 +253,16 @@
           <span class="advantages__location-subtitle subtitle-partition">Карта локаций</span>
         </div>
       </div>
-      <picture>
-        <source srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" media="(min-width:768px)">
-        <source srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-        <source srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" media="(min-width:768px)">
-        <img class="advantages__location-map" src="img/map-mobile.png 1x" srcset="img/map-mobile@2x.png 2x" width="556" height="435" alt="Карта локаций серверов. Москва.">
-      </picture>
+      <div class="advantages__card__container-img">
+        <svg width="196" height="232" viewBox="0 0 196 232" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <use href="./img/sprite.svg#icon-map"></use>
+        </svg>
+        <picture>
+          <source srcset="img/map-desktop@2x.png 1x, img/map-desktop@2x.png 2x" media="(min-width:768px)">
+          <img class="advantages__location-map" src="img/map-mobile@2x.png 1x" srcset="img/map-mobile@2x.png 2x" width="556" height="435" alt="Карта локаций серверов. Москва.">
+        </picture>
+      </div>
+
     </section>
   </main>
 
@@ -325,9 +326,126 @@
     </a>
   </div>
   </footer>
+  <div class="authorization">
+     
+      <div class="authorization__container">
+        <button class="registration__link-back">
+          <svg class="registration__icon-arrow" width="20" height="25" viewBox="0 0 22 38" fill="currentColor">
+            <use href="./img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+        <div class="authorization__container-tabs">
+          <button class="authorization__tabs authorization__tabs--active" data-tab="#registration">Регистрация</button>
+          <button class="authorization__tabs" data-tab="#authorization">Вход</button>
+        </div>
+
+        <div class="authorization__tab-slide authorization__tab-slide--active" id="registration">
+         <form method="get" action=""  id="registration-form">
+            <label>
+              <span class="visually-hidden">Введите почту</span>
+              <input type="email" placeholder="Почта" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Введите пароль</span>
+              <input type="password" placeholder="Пароль" required>
+            </label>
+            <label>
+              <input class="input-hidden" type="checkbox" name="approval" required>
+              <span class="custom-checkbox"></span>
+              <a href="info.html" target="_blank" class="rules-content">
+                Я соглашаюсь со следующими установленными правилами: Политика использования файлов cookie WARPLAY.CLOUD, Пользовательское соглашение WARPLAY.CLOUD, Лицензионное соглашение MY.GAMES с конечным пользователем в отношении Игр, Лицензионное соглашение с конечным Пользователем для WARPLAY.CLOUD Игрового центра, Политика конфиденциальности портала WARPLAY.CLOUD, Политика конфиденциальности WARPLAY.CLOUD для детей
+              </a>
+            </label>
+            <button type="submit">Зарегистрироваться</button>
+         </form>
+        </div>
+        <div class="authorization__tab-slide" id="authorization">
+          <form method="post" action="#">
+            <label>
+              <span class="visually-hidden">Введите почту</span>
+              <input type="email" placeholder="Почта" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Введите пароль</span>
+              <input type="password" placeholder="Пароль" required>
+            </label>
+            <button type="submit">Войти</button>
+         </form>
+        </div>
+        <div class="registration__list-log-wrapper">
+          <span class="registration__text-log-in">Войти через</span>
+          <ul class="registration__list-log-in-social">
+            <li class="registration__item-log-in-social">
+              <a class="registration__link-log-in-social">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <use href="./img/sprite.svg#icon-mail-ru"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+              <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+                <use href="./img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+                  <use href="./img/sprite.svg#icon-ok"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+                  <use href="./img/sprite.svg#icon-google"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <use href="./img/sprite.svg#icon-twitch"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <use href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="registration__item-log-in-social">
+              <a href="" class="registration__link-log-in-social">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <use href="./img/sprite.svg#icon-apple"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+    </div>
+  </div>
 
   <script src="./js/swiper-bundle.js"></script>
   <script src="./js/main.js" type="module"></script>
 </body>
-
 </html>

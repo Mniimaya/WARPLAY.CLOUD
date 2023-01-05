@@ -24,10 +24,21 @@ body {
   padding: 0;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 img {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+.input-hidden {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .section-wrapper {
