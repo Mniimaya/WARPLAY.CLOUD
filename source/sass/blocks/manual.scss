@@ -156,18 +156,26 @@
 }
 
 .manual__list li:nth-child(odd) {
-  transform: translateY(50%);
-  transition: 1s;
+  @include viewport--lg {
+    transform: translateY(50%);
+    transition: 1s;
+  }
+
 }
 
 .manual__list li:nth-child(even) {
-  transform: translateY(-50%);
-  transition: 1s;
+  @include viewport--lg {
+    transform: translateY(-50%);
+    transition: 1s;
+  }
 }
 
 .manual__card--activated .manual__list li:nth-child(odd),
 .manual__card--activated .manual__list li:nth-child(even) {
-  transform: translateY(0);
+  @include viewport--lg {
+    transform: translateY(0);
+  }
+
 }
 
 .manual__item {
