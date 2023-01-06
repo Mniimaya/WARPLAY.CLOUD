@@ -1,0 +1,193 @@
+.feedback {
+    padding: 20px 15px;
+
+    @include viewport--md {
+        padding: 70px 25px;
+    }
+}
+
+.feedback__container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feedback__container p {
+    font-family: "Aire Exterior","Arial",sans-serif;
+    font-size: 39px;
+    line-height: 39px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feedback__container p span {
+    color: #57d6ff;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    font-family: "Roboto","Arial",sans-serif;
+}
+
+.feedback__container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback__container form span:not(.select-file):not(.counter-symbol):not(.counter-symbol span) {
+    color: #57d6ff;
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 300;
+    font-family: "Roboto","Arial",sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.feedback__container form input:not(input[type="file"]),
+.feedback__container form textarea {
+    font-family: "Aire Exterior";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(0,0,0,.5);
+    width: 100%;
+    min-height: 75px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: 0;
+    resize: none;
+    transition: $trans;
+}
+
+.feedback__container form textarea::-webkit-scrollbar {
+    width: 5px;
+    background-color: $color-white;
+}
+
+.feedback__container form textarea::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $color-light-blue;
+}
+
+
+.feedback__container form input:not(input[type="file"]):hover,
+.feedback__container form textarea:hover {
+    background-color: rgba(255,255,255,.9);
+}
+
+.feedback__container form input:not(input[type="file"]):focus-visible,
+.feedback__container form textarea:focus-visible {
+    border: 1px solid #00c5ff;
+    outline: 0;
+}
+
+.label-textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-textarea .counter-symbol {
+    font-size: 12px;
+    color: #57d6ff;
+    line-height: 15px;
+    font-weight: 300;
+    font-family: "Roboto","Arial",sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.label-textarea .counter-symbol span {
+    color: inherit;
+}
+
+.feedback__container form textarea {
+    padding-top: 25px;
+    min-height: 150px;
+    margin-bottom: 5px;
+}
+
+.feedback__container form input[type="file"] {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.select-file {
+    background-color: #00c5ff;
+    color: $color-white;
+    border-radius: 30px;
+    width: 250px;
+    min-height: 50px;
+    border: none;
+    font-family: "Aire Exterior";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $trans;
+}
+
+.select-file:hover {
+   background-color: #57d6ff;
+}
+
+.label-file {
+    width: min-content;
+}
+
+.feedback__container form button[type="submit"] {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    min-height: 61px;
+    background-color: #fff;
+    border: 0;
+    font-family: "Aire Exterior","Arial",sans-serif;
+    position: relative;
+    width: 216px;
+    margin-bottom: 30px;
+    align-self: center;
+    margin-top: 30px;
+    align-self: center;
+    transition: $trans;
+}
+
+.feedback__container form button[type="submit"]:hover {
+    color: #00c5ff;
+}
+
+.feedback__container form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @include viewport--md {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+.feedback__container form fieldset label {
+    @include viewport--md {
+        grid-column: 1 span;
+    }
+}
+
+.feedback__container form fieldset label:last-of-type {
+    @include viewport--md {
+        grid-column: 2 span;
+    }
+}
+

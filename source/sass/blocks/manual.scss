@@ -4,7 +4,8 @@
   position: relative;
 
   @include viewport--lg {
-    padding-bottom: 153px;
+    padding-bottom: 150px;
+    padding-top: 150px;
   }
 }
 
@@ -45,6 +46,7 @@
     grid-column: 2/-1;
     grid-row: 2/3;
   }
+
 }
 
 .manual__description-card {
@@ -151,6 +153,21 @@
     column-gap: 61px;
     margin-bottom: 84px;
   }
+}
+
+.manual__list li:nth-child(odd) {
+  transform: translateY(50%);
+  transition: 1s;
+}
+
+.manual__list li:nth-child(even) {
+  transform: translateY(-50%);
+  transition: 1s;
+}
+
+.manual__card--activated .manual__list li:nth-child(odd),
+.manual__card--activated .manual__list li:nth-child(even) {
+  transform: translateY(0);
 }
 
 .manual__item {

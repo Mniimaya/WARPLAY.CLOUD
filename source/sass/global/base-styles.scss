@@ -65,3 +65,38 @@ img {
     }
   }
 }
+
+.subtitle-partition {
+  @include viewport--lg {
+    transform: scale(0);
+    text-transform: $trans;
+  }
+}
+
+.activated-container .subtitle-partition {
+  @include viewport--lg {
+    transform: scale(1);
+    transition: $trans;
+  }
+}
+
+.manual__description-card, .manual__description-characteristic, .advantages__description {
+  @include viewport--lg {
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+}
+
+.manual__description-characteristic {
+  @include viewport--lg {
+    transition: 0.7s;
+  }
+}
+
+.activated-container .manual__description-card, .activated-container .manual__description-characteristic, .activated-container .advantages__description {
+  @include viewport--lg {
+    transform: translateX(0);
+  }
+}
+
+

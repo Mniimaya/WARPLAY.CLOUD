@@ -1,5 +1,5 @@
 .authorization {
-  padding: 40px 30px;
+  padding: 100px 20px 40px 20px;
   height: 100%;
   position: fixed;
   margin: 0 auto;
@@ -46,7 +46,7 @@
   margin-bottom: 20px;
   cursor: pointer;
   position: absolute;
-  top: -30px;
+  top: -60px;
   left: 0;
 
   &:hover {
@@ -116,7 +116,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  padding: 20px;
 }
 
 .authorization__tab-slide form label {
@@ -173,6 +172,7 @@ input[name="approval"]:checked + .custom-checkbox {
   background-size: 17px 14px;
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 }
 
 .custom-checkbox {
@@ -182,6 +182,11 @@ input[name="approval"]:checked + .custom-checkbox {
   background-color: #FFFFFF;
   margin-right: 15px;
   cursor: pointer;
+  flex-shrink: 0;
+}
+
+.custom-checkbox:focus-visible {
+  outline: 3px solid $color-blue;
 }
 
 .authorization__tab-slide form button[type=submit] {
@@ -194,8 +199,9 @@ input[name="approval"]:checked + .custom-checkbox {
   border: none;
   font-family: $font-aire;
   position: relative;
-  width: 230px;
+  width: 216px;
   margin-bottom: 30px;
+  align-self: center;
 
   &:hover {
     color: $color-blue;
@@ -222,6 +228,18 @@ input[name="approval"]:checked + .custom-checkbox {
   line-height: 14px;
   color: #FFFFFF;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.registration__text-log-in::after {
+  content: "";
+  width: 250px;
+  height: 1px;
+  background-color: $color-gray;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .registration__list-log-in-social {

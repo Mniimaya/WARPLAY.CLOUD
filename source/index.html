@@ -58,25 +58,19 @@
       <nav class="header__navigation">
         <ul class="header__list navigation">
           <li class="header__item navigation__item">
-            <a href="#" class="header__nav-link navigation__link navigation__link--current">Главная</a>
+            <a href="#" class="header__nav-link navigation__link" data-name="#main-container">Главная</a>
           </li>
           <li class="header__item navigation__item">
-            <a href="info.html" class="header__nav-link navigation__link">Сервера</a>
+            <a href="info.html" class="header__nav-link navigation__link" data-name="#manual-container">Как это работает</a>
           </li>
           <li class="header__item navigation__item">
-            <a href="info.html" class="header__nav-link navigation__link">Скачать</a>
+            <a href="info.html" class="header__nav-link navigation__link" data-name="#price-container">Цены</a>
           </li>
           <li class="header__item navigation__item">
-            <a href="info.html" class="header__nav-link navigation__link">Открыть в браузере</a>
+            <a href="info.html" class="header__nav-link navigation__link" data-name="#browser-container">Открыть в браузере</a>
           </li>
           <li class="header__item navigation__item">
-            <a href="info.html" class="header__nav-link navigation__link">Цены</a>
-          </li>
-          <li class="header__item navigation__item">
-            <a href="info.html" class="header__nav-link navigation__link">Тех поддержка</a>
-          </li>
-          <li class="header__item navigation__item">
-            <a href="contacts.html" class="header__nav-link navigation__link">Контакты</a>
+            <a href="info.html" class="header__nav-link navigation__link" data-name="#feedback-container">Тех поддержка</a>
           </li>
         </ul>
       </nav>
@@ -89,7 +83,7 @@
   </header>
 
   <main>
-    <section class="intro">
+    <section class="intro observer-container" id="main-container">
       <h1 class="visually-hidden">Сервис облачного гейминга для вашего досуга.</h1>
 
       <div class="intro__card">
@@ -143,7 +137,7 @@
       </div>
     </section>
     <div class="section-wrapper">
-    <section class="manual container">
+    <section class="manual container observer-container" id="manual-container">
       <h2 class="visually-hidden">О работе сервиса</h2>
 
       <div class="manual__container">
@@ -178,7 +172,7 @@
       </div>
     </section>
 
-    <section class="rate container">
+    <section class="rate container observer-container" id="price-container">
       <h2 class="visually-hidden">Тарифные планы облачного гейминга</h2>
 
       <div class="rate__container">
@@ -232,7 +226,7 @@
 
   </div>
 
-    <section class="advantages container">
+    <section class="advantages container observer-container" id="browser-container">
       <h2 class="visually-hidden">Наши приемущества</h2>
 
       <div class="advantages__container">
@@ -263,6 +257,36 @@
         </picture>
       </div>
 
+    </section>
+
+    <section class="feedback container observer-container" id="feedback-container">
+      <h2 class="visually-hidden">Контакты и форма обратной связи.</h2>
+
+      <div class="feedback__container">
+        <p>Остались вопросы? <span>Заполните форму и мы постараемся Вам помочь</span></p>
+
+        <form action="#" method="get" class="form-feedback">
+          <fieldset>
+            <label>
+              <input type="text" name="userName" placeholder="Ваше имя" required>
+            </label>
+            <label>
+              <input type="email" name="userEmail" placeholder="Ваш Email" required>
+            </label>
+            <label class="label-textarea">
+              <textarea name="userMessage" placeholder="Опишите вашу проблему" maxlength="500" required></textarea>
+              <span class="counter-symbol"><span>0</span>/500</span>
+            </label>
+          </fieldset>
+    
+          <span>Вы можете прикрепить скриншот который отображает суть проблемы</span>
+          <label class="label-file">
+            <span class="select-file">Выберите файлы</span>
+            <input type="file" multiple accept="image/*">
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -350,8 +374,8 @@
               <input type="password" placeholder="Пароль" required>
             </label>
             <label>
-              <input class="input-hidden" type="checkbox" name="approval" required>
-              <span class="custom-checkbox"></span>
+              <input class="input-hidden" type="checkbox" name="approval" tabindex="-1">
+              <span class="custom-checkbox" tabindex="0"></span>
               <a href="info.html" target="_blank" class="rules-content">
                 Я соглашаюсь со следующими установленными правилами: Политика использования файлов cookie WARPLAY.CLOUD, Пользовательское соглашение WARPLAY.CLOUD, Лицензионное соглашение MY.GAMES с конечным пользователем в отношении Игр, Лицензионное соглашение с конечным Пользователем для WARPLAY.CLOUD Игрового центра, Политика конфиденциальности портала WARPLAY.CLOUD, Политика конфиденциальности WARPLAY.CLOUD для детей
               </a>

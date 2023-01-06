@@ -8,12 +8,17 @@
 
   &::before {
     content: "";
-    width: 50px;
     height: 1px;
     background-color: $color-light-blue;
     display: inline-block;
     position: relative;
-    right: 34px;
+    width: 25px;
+    right: 15px;
     top: -5px;
+
+    @include viewport--md {
+      width: 50px;
+      right: 34px;
+    }
   }
 }
