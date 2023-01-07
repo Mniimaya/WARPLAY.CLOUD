@@ -37,6 +37,9 @@
   padding: 3px;
   color: $color-gray;
   @include trans;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     color: $color-blue;

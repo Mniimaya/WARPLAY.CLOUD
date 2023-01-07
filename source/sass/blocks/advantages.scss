@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-image: url("../img/advantages-background-mobile.png");
-  background-position: top 153px center;
+  background-position: top 217px center;
   background-size: 525px 357px;
   background-repeat: no-repeat;
   padding-bottom: 25px;
@@ -31,6 +31,7 @@
 .advantages__container {
   display: flex;
   flex-direction: column;
+  padding: 0 25px;
 }
 
 .advantages__card {
@@ -57,6 +58,7 @@
 .advantages__subtitle {
   max-width: 286px;
   margin-bottom: 392px;
+  text-align: center;
 
   @include viewport--md {
     margin-bottom: 92px;

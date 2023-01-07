@@ -172,7 +172,7 @@ input[name="approval"]:checked + .custom-checkbox {
   background-size: 17px 14px;
   background-repeat: no-repeat;
   background-position: center;
-  outline: none;
+  outline: none !important;
 }
 
 .custom-checkbox {
